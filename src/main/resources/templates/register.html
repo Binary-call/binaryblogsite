@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head th:replace="extra/header :: head"></head>
+
+
+<body>
+	<!-- THEME TOGGLE START -->
+	<th:block th:replace="extra/toggle_theme::toggle_theme"></th:block>
+	<!-- THEME TOGGLE END -->
+
+	<!-- Login 7 - Bootstrap Brain Component -->
+	<section class="py-3 p-md-4 p-xl-5">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5">
+					<div
+						class="card border border-light-subtle rounded-4 bg-body rounded shadow-sm">
+						<div class="card-body p-3 p-md-4 p-xl-5">
+
+							<article class="mb-4">
+								<h2 class="display-5 link-body-emphasis mb-1 poppins-light">Register
+								</h2>
+								<span class="text-muted">
+									Register your self before login
+								</span>
+							</article>
+
+
+							<form action="#!">
+								<div class="row gy-3 overflow-hidden">
+
+									<div class="col-12">
+										<div class="form-floating mb-3">
+											<input type="text" class="form-control" name="name"
+												id="name" placeholder="Enter your name" required
+												autocomplete="off"> <label for="name"
+												class="form-label">Enter Full Name</label>
+										</div>
+									</div>
+									
+									<div class="col-12">
+										<div class="form-floating mb-3">
+											<input type="email" class="form-control" name="email"
+												id="email" placeholder="name@example.com" required
+												autocomplete="off"> <label for="email"
+												class="form-label">Enter Email</label>
+										</div>
+									</div>
+
+									<div class="col-12">
+										<div class="form-floating mb-3">
+											<input type="password" class="form-control" name="password"
+												id="password" value="" placeholder="Password" required>
+											<label for="password" class="form-label">Enter Password</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-floating mb-3">
+											<input type="password" class="form-control" name="con_password"
+												id="con_password" value="" placeholder="Password" required>
+											<label for="con_password" class="form-label">Confirm Password</label>
+										</div>
+									</div>
+
+									<div class="col-12">
+										<div class="d-grid">
+											<button class="btn bsb-btn-xl btn-primary" type="submit">Click to register</button>
+										</div>
+									</div>
+								</div>
+							</form>
+
+							
+							
+							<div class="border-bottom mt-4">
+								<span class="text-muted">If you have already register </span> <a
+									href="login">click here to login</a> <br>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="footer mt-auto py-3 bg-body-tertiary fixed-bottom">
+		<div class="container">
+			<span class="text-body-secondary">Place sticky footer content
+				here.</span>
+		</div>
+	</footer>
+	
+	<div th:replace="extra/footer_script::footer_script"></div>
+
+</body>
+
+</html>

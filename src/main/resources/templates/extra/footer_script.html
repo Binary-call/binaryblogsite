@@ -1,0 +1,39 @@
+	
+<div th:fragment="footer_script">	
+	<script src="" th:src="@{/js/vendor/bootstrap.bundle.min.js}"></script>
+	<script src="" th:src="@{/js/vendor/owl.carousel.min.js}"></script>
+	
+	<script src="" th:src="@{/js/assets/main.js}"></script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+          const navbar = document.getElementById('navbar');
+          const toggleBtn = document.getElementById('toggle-navbtn');
+          
+          var scrollNavLinks = document.querySelectorAll('#adjust-scrollnav > a'); // add and remove color 
+          
+          if(window.scrollY > 0) {
+            navbar.classList.add('fixed-top', 'bg-body-navbar');
+            toggleBtn.classList.remove('hide-menu-bar');
+            document.getElementById('adjust-scrollnav').classList.add('adjust-scrollnav');
+            
+            // Loop through each scrollNavLinks element and change its color
+            scrollNavLinks.forEach(function(link) {
+            	link.style.setProperty('color', 'var(--bs-black)', 'important');
+            });
+            
+          } else {
+            navbar.classList.remove('fixed-top', 'bg-body-navbar');
+            toggleBtn.classList.add('hide-menu-bar');
+            document.getElementById('adjust-scrollnav').classList.remove('adjust-scrollnav');
+            
+            // Loop through each scrollNavLinks element and change its color
+            scrollNavLinks.forEach(function(link) {
+            	link.style.setProperty('color', 'var(--bs-emphasis-color)', 'important');
+            });
+          }
+        });
+      </script>
+      
+      
+</div>

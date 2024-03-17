@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head th:replace="extra/header :: head"></head>
+
+    <style>
+		.vscode-like {
+		  /* background-color: var(--bs-light); */
+		  background-color: rgba(var(--bs-tertiary-bg-rgb))!important;
+		  /* color: var(--bs-white); */
+		  font-family: 'Consolas', 'Menlo', monospace;
+		  padding: 15px;
+		  border-radius: 5px;
+		  overflow-x: auto;
+		}
+		
+		.vscode-like code {
+		  display: block;
+		}
+
+    </style>
+
+<body>
+	<!-- THEME TOGGLE START -->
+		<th:block th:replace="extra/toggle_theme::toggle_theme"></th:block>
+	<!-- THEME TOGGLE END -->
+	
+	<!-- Header Navbar START -->
+		<th:block th:replace="extra/navbar::header_nav"></th:block>
+	<!-- Header Navbar END -->
+
+
+	<main class="container">
+	
+		<th:block th:replace="extra/sidebar::sidebar"></th:block>
+	
+	
+  <article>
+    <h2 class="display-5 link-body-emphasis mb-1 poppins-light">Sample blog post</h2>
+    <p class="blog-post-meta">
+      January 1, 2021 by <a href="#">Mark</a>
+    </p>
+  </article>
+
+  <div class="custom-border rounded-3 list-group list-group-checkable d-grid gap-2 overflow-x-auto mb-5 hide-scrollbar">
+    <label class="py-3" for="code-ide">
+      Fourth disabled radio
+      <span class="d-block small opacity-50">This option is disabled</span>
+
+      <pre class="vscode-like">
+        <code style="margin-top: -2rem; margin-left: -4rem;">
+          class {
+              public static void main(String[] args) {
+                  System.out.println("Hello i am Aditya ");
+              }
+          }
+        </code>
+      </pre>
+    </label>
+  </div>
+	
+  <div class="custom-border rounded-3 list-group list-group-checkable d-grid gap-2 overflow-x-auto mb-5 hide-scrollbar">
+    <label class="py-3" for="code-ide">
+      Fourth disabled radio
+      <span class="d-block small opacity-50">This option is disabled</span>
+
+      <pre class="vscode-like">
+        <code style="margin-top: -2rem; margin-left: -4rem;">
+          class {
+              public static void main(String[] args) {
+                  System.out.println("Hello i am Aditya dgasdf asdgas dgasdg asd fas dfasdfasdfasdf asdfasdfas dfa sdf asdf as asfd asdf asd fa sdf as dfa sdf asd fas df as dfas df asdf as dfas dfa sf sadfdf asdf as df asdf asd f");
+              }
+          }
+        </code>
+      </pre>
+    </label>
+  </div>
+		
+<!-- 		<article>
+			<h2 class="display-5 link-body-emphasis mb-1 poppins-light">Sample blog post</h2>
+			<p class="blog-post-meta">
+				January 1, 2021 by <a href="#">Mark</a>
+			</p>
+		</article>
+		
+        
+		<div class="list-group list-group-checkable d-grid gap-2 border-0 mb-5">
+			<label class="list-group-item rounded-3 py-3" for="listGroupCheckableRadios4">
+				Fourth disabled radio
+				<span class="d-block small opacity-50">This option is disabled</span>
+				
+				<pre class="vscode-like">
+		            <code style="margin-top: -4rem; margin-left: -8rem;">
+		                <ol style="margin-left: 0;">
+		                class {
+		                    public static void main(String[] args) {
+		                        System.out.println("Hello i am Aditya");
+		                    }
+		                }
+		                </ol>
+		            </code>
+		        </pre>
+				
+			</label>
+			
+		</div> -->
+		
+	</main>
+
+
+
+	<!-- Header Navbar START -->
+	<th:block th:replace="extra/footer::footer"></th:block>
+	<!-- Header Navbar END -->
+
+</body>
+
+</html>
